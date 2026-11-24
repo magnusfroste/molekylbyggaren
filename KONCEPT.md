@@ -36,8 +36,9 @@ C₂H₂, CH₃OH, C₂H₅OH). Efter varje molekyl berättar Kotten en rad om �
    visualiserat med hjälp av partikelmodeller. Grundämnen, molekyl- och
    jonföreningar samt hur ämnen omvandlas genom kemiska reaktioner. Atomer,
    elektroner och kärnpartiklar.”
-2. `KE.7-9.1.2` (valfri) – kemiska föreningars egenskaper och uppbyggnad, om
-   citatet verifieras i lgr22-filen före inskick.
+   (Hämtat ur Skolverkets syllabus-API 2026-11-24, ordagrant.)
+   En punkt räcker: appen tränar molekylers uppbyggnad, inte kretslopp eller
+   reaktioner, och ingen av de andra KE.7-9-punkterna beskriver det bättre.
 
 ## Kotten
 Egen SVG-kotte med fem uttryck (glad, hejar, firar, tänker, funderar). Hon
