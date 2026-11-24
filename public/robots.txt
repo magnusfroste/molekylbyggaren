@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://molekylbyggaren.skolappar.com/sitemap.xml

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Molekylbyggaren – bygg molekyler atom för atom</title>
+<meta name="description" content="Bygg molekyler atom för atom: fyll platserna i strukturen med rätt grundämne. Vatten, metan, etanol och fler. Åk 7–9, kemi. Gratis, ingen inloggning.">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="Molekylbyggaren – bygg molekyler atom för atom">
+<meta property="og:description" content="Fyll molekylens platser med rätt grundämne. Kemi åk 7–9.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.skolappar.com/kotten.js" defer></script>
+</head>
+<body>
+
+<!-- START:startskarm -->
+<div id="startskarm">
+  <div class="sk-inner">
+    <img class="sk-ikon" src="icon-192.png" alt="" width="96" height="96">
+    <h1>Molekylbyggaren</h1>
+    <p class="sk-tagline">Bygg molekyler atom för atom</p>
+    <div class="sk-taggar">
+      <span>Öva</span><span>Kemi</span><span>Åk 7–9</span>
+    </div>
+    <button class="sk-play" id="spela" aria-label="Spela Molekylbyggaren">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      Spela
+    </button>
+    <p class="sk-fot">Gratis · ingen inloggning · skolappar.com</p>
+    <details class="sk-laroplan">
+      <summary>Läroplanskoppling (Lgr22)</summary>
+      <p><b>Kemi, åk 7–9, centralt innehåll:</b> ”Materiens uppbyggnad, kretslopp och oförstörbarhet visualiserat med hjälp av partikelmodeller. Grundämnen, molekyl- och jonföreningar samt hur ämnen omvandlas genom kemiska reaktioner.”</p>
+      <p>Appen tränar molekylers uppbyggnad: eleven läser en molekylformel, känner igen grundämnenas symboler och sätter rätt antal atomer på rätt plats i strukturen. Källa: Skolverket, läroplanen för grundskolan (Lgr22).</p>
+    </details>
+  </div>
+</div>
+<!-- SLUT:startskarm -->
+
+<main id="spel" hidden>
+  <header class="hud">
+    <div class="hud-vanster">
+      <svg class="kotten-hud" viewBox="0 0 40 40" aria-hidden="true"></svg>
+      <div class="hud-titel">Molekylbyggaren</div>
+    </div>
+    <div class="hud-mitten">
+      <span class="runda" id="rundtext">Molekyl 1 av 4</span>
+      <span class="stjarnor" id="stjarnor" aria-label="poäng"></span>
+    </div>
+    <div class="hud-hoger">
+      <button class="ikon-knapp" id="hjalp" aria-label="Tips">?</button>
+      <button class="ikon-knapp" id="ljud" aria-label="Ljud på eller av">
+        <svg viewBox="0 0 24 24" aria-hidden="true" id="ljudikon"></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="brada">
+    <div class="mal">
+      <h2 id="namn">Vatten</h2>
+      <p class="formel" id="formel">H<sub>2</sub>O</p>
+      <p class="fraga" id="fraga">Fyll den blinkande platsen med rätt atom.</p>
+    </div>
+    <div class="molekyl" id="molekylvta">
+      <svg id="molekylsvg" viewBox="0 0 100 100" role="img" aria-label="Molekylens struktur"></svg>
+    </div>
+  </section>
+
+  <section class="lada" aria-label="Grundämnen">
+    <button class="atom-knapp" data-el="H" style="--farg:#7db3d6"><b>H</b><span>väte</span></button>
+    <button class="atom-knapp" data-el="O" style="--farg:#cf5b4c"><b>O</b><span>syre</span></button>
+    <button class="atom-knapp" data-el="C" style="--farg:#4c5563"><b>C</b><span>kol</span></button>
+    <button class="atom-knapp" data-el="N" style="--farg:#5b7fd4"><b>N</b><span>kväve</span></button>
+    <button class="atom-knapp" data-el="Cl" style="--farg:#5f9e52"><b>Cl</b><span>klor</span></button>
+  </section>
+
+  <footer class="kotten-rad">
+    <div class="kotten-prat">
+      <svg class="kotten-svg" viewBox="0 0 60 60" aria-hidden="true" id="kotten"></svg>
+      <span id="kottentext">Läs formeln och tryck på rätt grundämne i lådan.</span>
+    </div>
+  </footer>
+</main>
+
+<div id="overlay" hidden>
+  <div class="ov-inner">
+    <div id="ov-bild"></div>
+    <h2 id="ov-titel"></h2>
+    <p id="ov-text"></p>
+    <div class="ov-knappar">
+      <button class="knapp stor" id="ov-nasta"></button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
