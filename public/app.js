@@ -91,6 +91,7 @@
   }
   function säg(text) {
     if (!ljudPa) return;
+          try { if (window.__rost && window.__rost(text, true)) return; } catch (e) { }
     try {
       if (!("speechSynthesis" in window) || !text) return;
       var u = new SpeechSynthesisUtterance(text);
