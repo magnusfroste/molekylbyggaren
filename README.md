@@ -8,4 +8,4 @@ plats, fel atom studsar tillbaka med en förklaring. 13 riktiga molekyler i tre
 nivåer, kontrollerade med `node verify.mjs` (formel mot struktur, valens per atom).
 
 Statisk app: `public/` serveras av nginx (`Dockerfile`). Inga beroenden, inga
-tredjepartsanrop förutom kodsnutten `kotten.js` från skolappar.com.
+tredjepartsanrop förutom kodsnutten `kotten.js` från skolappar.org.

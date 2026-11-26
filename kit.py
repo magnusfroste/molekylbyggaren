@@ -72,7 +72,7 @@ def og():
         d.text((W / 2 - d.textlength(t, font=font) / 2, 260), t, fill=BLACK, font=font)
         t2 = "Bygg molekyler atom för atom · åk 7–9"
         d.text((W / 2 - d.textlength(t2, font=small) / 2, 380), t2, fill=(74, 82, 96), font=small)
-        t3 = "Gratis · ingen inloggning · skolappar.com"
+        t3 = "Gratis · ingen inloggning · skolappar.org"
         d.text((W / 2 - d.textlength(t3, font=small) / 2, 465), t3, fill=(120, 126, 136), font=small)
     im.save(P / "og.png")
 
@@ -100,10 +100,10 @@ def main():
             {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    (P / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://molekylbyggaren.skolappar.com/sitemap.xml\n", encoding="utf-8")
+    (P / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://molekylbyggaren.skolappar.org/sitemap.xml\n", encoding="utf-8")
     (P / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        '<url><loc>https://molekylbyggaren.skolappar.com/</loc></url>\n</urlset>\n', encoding="utf-8")
+        '<url><loc>https://molekylbyggaren.skolappar.org/</loc></url>\n</urlset>\n', encoding="utf-8")
     print("skrev ikoner, favicon, og.png, manifest, robots, sitemap till", P)
 
 
