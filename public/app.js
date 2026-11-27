@@ -92,13 +92,7 @@
   function säg(text) {
     if (!ljudPa) return;
           try { if (window.__rost && window.__rost(text, true)) return; } catch (e) { }
-    try {
-      if (!("speechSynthesis" in window) || !text) return;
-      var u = new SpeechSynthesisUtterance(text);
-      u.lang = "sv-SE"; u.rate = 0.98; u.volume = 0.9;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-    } catch (e) { /* klassrumsplattor tappar talare */ }
+        console.warn('saknar mp3:', text);
   }
   function spår(namn, värde) { try { if (window.skolappar && window.skolappar.event) window.skolappar.event(namn, värde); } catch (e) { } }
 
@@ -244,7 +238,7 @@
       document.getElementById("fraga").className = "fraga nej";
       document.getElementById("fraga").textContent = "Inte den atomen – titta på formeln igen.";
       document.getElementById("kottentext").textContent = m.namn + " består av " + sammansättningText(m) + ".";
-      if ("speechSynthesis" in window && ljudPa) säg(m.namn + " består av " + sammansättningText(m) + ".");
+      if (ljudPa) säg(m.namn + " består av " + sammansättningText(m) + ".");
       kottenByt("funderar");
       spår("hint");
     }
@@ -358,7 +352,7 @@
     });
     document.getElementById("ljud").addEventListener("click", function () {
       ljudPa = !ljudPa;
-      if (!ljudPa && "speechSynthesis" in window) { try { window.speechSynthesis.cancel(); } catch (e) { } }
+      if (!ljudPa && window.__rostStopp) window.__rostStopp();
       ritaLjudIkon(); spår("sound_off");
     });
   }
